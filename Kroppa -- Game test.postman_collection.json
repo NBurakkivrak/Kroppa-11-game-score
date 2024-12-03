@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "6af29d88-289e-4e23-adef-d69d29f43ddb",
+		"name": "Kroppa // Game test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16867081"
+	},
+	"item": [
+		{
+			"name": "Start Game",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"test\",\r\n  \"surname\": \"test2\",\r\n  \"email\": \"nburakkitvrak@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/start-game",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"start-game"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "End Game",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"game_id\": 2,\r\n  \"user_id\": 2,\r\n  \"score\": 499\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/end-game",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"end-game"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Top Scores",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/top-10-users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"top-10-users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
